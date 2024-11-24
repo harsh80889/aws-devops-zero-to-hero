@@ -7,5 +7,5 @@ set -e
 #and when we integrate the code pipeline in code deploy so code pipeline again
 #tried to deploy the same docker image and the docker image already exits so it gave
 #error, so we write the below code to delete the existing docker image
-container_id=`docker ps | awk -f " "'{print $1}'`
-docker rm -f $container_id
+containerid=`docker ps | awk -F " "'{print $1}'`
+docker rm -f $containerid
